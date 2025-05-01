@@ -1,0 +1,13 @@
+const mongoose = require('mongoose');
+
+const backlogSchema = new mongoose.Schema({
+    tareas: [
+        {
+            type: mongoose.Schema.Types.ObjectId,
+            ref: 'Tarea'
+        }
+    ]
+});
+
+module.exports = mongoose.model('Backlog', backlogSchema);
+
