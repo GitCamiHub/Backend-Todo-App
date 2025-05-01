@@ -10,7 +10,7 @@ router.get('/', SprintController.getAllSprints);
 router.post('/', SprintController.createSprint); 
 router.get('/:id', SprintController.getSprintById); 
 router.put('/:id', SprintController.updateSprint); 
-router.put('/:id/add-task/:taskId', SprintController.addTareaToSprint); 
+router.put('/:id/add-tarea/:tareaId', SprintController.addTareaToSprint); 
 router.delete('/:id', SprintController.deleteSprint);
 
 module.exports = router;

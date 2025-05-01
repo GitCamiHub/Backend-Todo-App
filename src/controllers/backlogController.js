@@ -26,13 +26,17 @@ const addTareaToBacklog = async (req, res) => {
 
     try {
         const backlog = await Backlog.findOne();
+        console.log('Backlog encontrado:', backlog);
+
+
         const tarea = await Tarea.findById(tareaId);
+        console.log('Tarea encontrada:', tarea);
 
         if (!tarea) {
             return res.status(404).json({ message: 'Tarea no encontrada' });
         }
 
-        backlog.tareas.push(tarea._id); //tarea o tare._id??
+        backlog.tareas.push(tarea._id); 
         await backlog.save();
 
         res.json(backlog);

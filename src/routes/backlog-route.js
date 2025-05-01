@@ -5,7 +5,7 @@ const BacklogController = require('../controllers/backlogController')
 
 router.get('/', BacklogController.getBacklog);
 router.post('/', BacklogController.createBacklog);
-router.post('/add-tareas/:tareaId', BacklogController.addTareaToBacklog);
+router.put('/add-tareas/:tareaId', BacklogController.addTareaToBacklog);
 
 //aca uno de los dos era put segun el profe
 
